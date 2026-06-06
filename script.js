@@ -8,14 +8,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-const projectButtons = document.querySelectorAll('.project-btn');
-projectButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const projectName = button.dataset.project;
-    alert(`${projectName} is coming soon!`);
-  });
-});
-
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
