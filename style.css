@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap');
 
 :root {
   --bg: #020817;
@@ -13,6 +13,14 @@
 
 * {
   box-sizing: border-box;
+}
+
+img,
+picture,
+svg,
+video {
+  max-width: 100%;
+  display: block;
 }
 
 body {
@@ -129,7 +137,7 @@ body::before {
 
 .hero-script .typed-text {
   display: inline-block;
-  min-width: 16ch;
+  min-width: min(16ch, 100%);
 }
 
 .hero-script::after {
@@ -672,10 +680,105 @@ body::before {
   }
 }
 
+@media (max-width: 800px) {
+  .section-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-card {
+    padding: 28px 24px;
+  }
+
+  .hero-icons {
+    grid-template-columns: 1fr;
+  }
+
+  .project-preview {
+    height: 180px;
+  }
+}
+
 @media (max-width: 700px) {
   .hero-top {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
+  }
+
+  .hero-section {
+    gap: 24px;
+  }
+
+  .hero-copy h1 {
+    font-size: 3.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .github-invite {
+    padding: 16px 18px;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-container {
+    width: calc(100% - 24px);
+    padding: 24px 0 60px;
+  }
+
+  .hero-script {
+    font-size: 2.2rem;
+  }
+
+  .hero-copy h1 {
+    font-size: 2.5rem;
+    line-height: 1.05;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .section-header p {
+    font-size: 0.98rem;
+  }
+
+  .hero-card {
+    padding: 22px;
+  }
+
+  .hero-avatar {
+    min-height: 220px;
+  }
+
+  .hero-actions {
+    gap: 12px;
+  }
+
+  .project-preview {
+    height: 150px;
+  }
+
+  .project-details {
+    padding: 18px;
+  }
+
+  .github-invite {
+    font-size: 0.95rem;
+  }
+
+  .social-footer {
+    justify-content: center;
+  }
+
+  .form-row {
+    flex-direction: column;
   }
 }
